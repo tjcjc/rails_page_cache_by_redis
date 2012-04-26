@@ -1,4 +1,7 @@
 require './init_fragment_key_methods'
+require 'action_view'
+require 'active_record'
+require 'action_controller'
 module ActionView::Helpers
   include RedisFragmentCache::InitFragmentKeyMethods
   init_fragment_key_methods
