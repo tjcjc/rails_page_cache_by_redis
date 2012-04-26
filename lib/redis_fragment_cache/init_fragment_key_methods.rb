@@ -18,6 +18,7 @@ module RedisFragmentCache
               "views/#{k}_\#{object_id}_set_key"
             end
           END
+          class_eval str
         end
       end
 
