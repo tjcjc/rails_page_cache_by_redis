@@ -14,7 +14,7 @@ module RedisFragmentCache
     end
 
     def configuration
-      @_configuration = Configuration.new
+      @_configuration ||= Configuration.new
     end
 
     def reset_configuration!
