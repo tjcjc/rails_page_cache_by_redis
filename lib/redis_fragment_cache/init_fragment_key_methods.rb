@@ -38,7 +38,7 @@ module RedisFragmentCache
                 key = "#{k}_#{method_name}_#{uniq_key}_\#{suffix}"
                 if add_to_set
                   RedisFragmentCache.configuration.redis_client.sadd #{k}_set_key(#{params.first}), "views/\#{key}"
-                  RedisFragmentCache.configuration.redis_client.expire #{k}_set_key(#{params.first}), #{self.expire_intervel}
+                  RedisFragmentCache.configuration.redis_client.expire #{k}_set_key(#{params.first}), RedisFragmentCache.configuration.expire_time
                 end
                 key
               end
