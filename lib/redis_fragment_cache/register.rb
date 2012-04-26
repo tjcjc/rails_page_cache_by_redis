@@ -5,3 +5,4 @@ require 'action_controller'
 ActionView::Helpers.send(:include, RedisFragmentCache::InitFragmentKeyMethods)
 ActiveRecord::Base.send(:include, RedisFragmentCache::InitFragmentKeyMethods)
 ActionController::Base.send(:include, RedisFragmentCache::InitFragmentKeyMethods)
+ActionController::Caching::Sweeper.send(:include, RedisFragmentCache::InitFragmentKeyMethods)
