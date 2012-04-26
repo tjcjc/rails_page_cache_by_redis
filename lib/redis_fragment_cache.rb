@@ -6,6 +6,7 @@ module RedisFragmentCache
   class << self
 
     def register!
+      require 'redis_fragment_cache/register'
     end
 
     def configure(&block)

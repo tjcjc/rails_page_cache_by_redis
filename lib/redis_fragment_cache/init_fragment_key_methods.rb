@@ -4,6 +4,8 @@ module RedisFragmentCache
     def self.included(base)
       base.extend         ClassMethods
       base.class_eval do
+        init_set_key_methods
+        init_fragment_key_methods
       end
       base.send :include, InstanceMethods
     end # self.included
