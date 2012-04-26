@@ -8,7 +8,7 @@ module RedisFragmentCache
     def register!
     end
 
-    def configura(&block)
+    def configure(&block)
       yield(configuration)
     end
 
